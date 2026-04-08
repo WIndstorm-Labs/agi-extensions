@@ -6,6 +6,9 @@
 **Principal Investigator:** Grant Lavell Whitmer III  
 **Infrastructure:** RTX 5090 (32GB VRAM), Hermes OC1 Autonomous Agent
 
+**Windstorm Institute:** https://windstorminstitute.org  
+*(Paper publication repository pending — this is the experiments repository)*
+
 ---
 
 ## Research Question
