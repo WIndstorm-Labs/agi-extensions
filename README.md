@@ -55,8 +55,6 @@ See individual experiment READMEs for detailed setup. Vision Basin Phase 1 (Pape
 | 6 | [The Inherited Constraint](https://github.com/Windstorm-Labs/inherited-constraint) | ✅ Published — [DOI 10.5281/zenodo.19432911](https://doi.org/10.5281/zenodo.19432911) |
 | 7 | [The Throughput Basin Origin](https://github.com/sneakyfree/agi-extensions) | 🟡 Preprint — Zenodo deposit pending Paper 7.1 |
 
-Note: this organization's URL slug is `WIndstorm-Labs` (capital `I`) due to a typo at org creation time. GitHub does not support renaming org slugs without breaking existing URLs. A correctly-cased mirror at `Windstorm-Labs` is planned.
-
 ---
 
 *License: MIT for code, CC BY 4.0 for data*
