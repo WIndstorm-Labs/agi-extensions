@@ -1,83 +1,62 @@
-# AGI Extensions
+# Paper 7: The Throughput Basin Origin — Experiments & Code
 
-**Paper 7 Experiments & Code**
+> **Note:** This is the Windstorm Labs mirror. The canonical repository &mdash; with the formal manuscript, internal adversarial review, complete CSVs, plots, and the Paper 7.1 tracking issue &mdash; is at **[sneakyfree/agi-extensions](https://github.com/sneakyfree/agi-extensions)**.
 
-🚧 In Progress
-
-**Paper Publication:** https://github.com/Windstorm-Institute/agi-extensions  
-**Windstorm Institute:** https://windstorminstitute.org
+**Status:** ✅ Experiments complete (April 2026). Formal draft published with internal adversarial review attached. Paper 7.1 follow-up scoped.
 
 ---
 
-## Quick Start
+## Read this first
 
-```bash
-# Six experiments ready to run:
+The four orthogonal experiments here (synthetic-corpus training, quantization cliff, transformer-vs-state-space architecture comparison, and RTX 5090 wall-power thermodynamic survey) are complete. The internal adversarial review of the results identifies four blocking items that constrain how strongly the headline can be read.
 
-# Exp 3: Recurrent vs Transformer (lowest risk, 4-8 hrs)
-cd exp-03-recurrent-vs-transformer
-python run_experiment.py
+> **Defensible claim:** *At 92M parameters, on Markov synthetic data with corpus-specific BPE tokenizers, training-data token entropy is the dominant predictor of achieved BPT, and we find no positive evidence of a transformer-specific ~4-bit ceiling in this regime.*
 
-# Exp 2: Quantization Cliff (6-10 hrs)
-cd exp-02-quantization-cliff
-python run_experiment.py
+The full review and the Paper 7.1 re-runs are tracked at:
 
-# Exp 1: Synthetic Training (8-12 hrs, training from scratch)
-cd exp-01-synthetic-training
-python run_experiment.py
+- **Adversarial review:** [sneakyfree/agi-extensions/review/adversarial_review.md](https://github.com/sneakyfree/agi-extensions/blob/main/review/adversarial_review.md)
+- **Paper 7.1 tracking issue:** [sneakyfree/agi-extensions#1](https://github.com/sneakyfree/agi-extensions/issues/1)
+
+---
+
+## What lives here
+
+This repository contains the experiment protocols for the four core Paper 7 experiments plus two scoping experiments. The full results CSVs, plots, and the formal manuscript live in the canonical repo.
+
+```
+exp-01-synthetic-training      Experiment 1: SYN-{2,4,8,12} GPT-2 training
+exp-02-quantization-cliff      Experiment 2: bitsandbytes RTN sweep
+exp-03-recurrent-vs-transformer Experiment 3: Pythia vs Mamba on 7 corpora
+exp-04-attention-head-mi       (scoping)
+exp-05-agentic-loop            (scoping)
+exp-06-energy-survey           Experiment 6: RTX 5090 wall-power φ
 ```
 
----
+## Reproducibility
 
-## Reproducibility Info
-
-**Hardware:** RTX 5090 (32GB VRAM) required
-**Runtime:** 32-56 hours for all 6 experiments
+**Hardware:** RTX 5090 (32GB VRAM)
+**Runtime:** ~14.5 hours for the four core experiments (autonomous overnight run)
 **Python:** 3.11+
-**Key deps:** torch, transformers, datasets, mamba-ssm (for Exp 3)
+**Key deps:** `torch`, `transformers`, `datasets`, `mamba-ssm`, `bitsandbytes`
 
-See individual experiment READMEs for detailed setup.
-
----
-
-## Results Preview
-
-Experiments not yet run - this is the protocol repository
+See individual experiment READMEs for detailed setup. Vision Basin Phase 1 (Paper 8 prelude) lives in the canonical repo at `exp-8/`.
 
 ---
 
 ## Series Index
 
-| # | Paper | Status | Key Result |
-|---|-------|--------|------------|
-| 1 | [Fons Constraint](https://github.com/Windstorm-Labs/fons-constraint) | ✅ Published | 64-codon alphabet |
-| 2 | [Receiver-Limited Floor](https://github.com/Windstorm-Labs/receiver-limited-floor) | ✅ Complete | Vocab-independent BPT |
-| 3 | [Throughput Basin](https://github.com/Windstorm-Labs/throughput-basin) | ✅ Published | 31-system convergence |
-| 4 | [Dissipative Decoder](https://github.com/Windstorm-Labs/dissipative-decoder) | ✅ Published | Regime A/B analysis |
-| 5 | [Serial Decoding Basin τ](https://github.com/Windstorm-Labs/serial-decoding-basin) | ✅ Published | τ = 4.16 ± 0.19 bits |
-| 6 | [Inherited Constraint](https://github.com/Windstorm-Labs/inherited-constraint) | ✅ Published | AI inherits biology |
-| 7 | [AGI Extensions](https://github.com/Windstorm-Labs/agi-extensions) | 🚧 In Progress | Data vs architecture |
+| # | Paper | Status |
+|---|-------|--------|
+| 1 | [The Fons Constraint](https://github.com/Windstorm-Labs/fons-constraint) | ✅ Published — [DOI 10.5281/zenodo.19274048](https://doi.org/10.5281/zenodo.19274048) |
+| 2 | [The Receiver-Limited Floor](https://github.com/Windstorm-Labs/receiver-limited-floor) | ✅ Published — [DOI 10.5281/zenodo.19322973](https://doi.org/10.5281/zenodo.19322973) |
+| 3 | [The Throughput Basin](https://github.com/Windstorm-Labs/throughput-basin) | ✅ Published — [DOI 10.5281/zenodo.19323194](https://doi.org/10.5281/zenodo.19323194) |
+| 4 | [The Serial Decoding Basin τ](https://github.com/Windstorm-Labs/serial-decoding-basin) | ✅ Published — [DOI 10.5281/zenodo.19323423](https://doi.org/10.5281/zenodo.19323423) |
+| 5 | [The Dissipative Decoder](https://github.com/Windstorm-Labs/dissipative-decoder) | ✅ Published — [DOI 10.5281/zenodo.19433048](https://doi.org/10.5281/zenodo.19433048) |
+| 6 | [The Inherited Constraint](https://github.com/Windstorm-Labs/inherited-constraint) | ✅ Published — [DOI 10.5281/zenodo.19432911](https://doi.org/10.5281/zenodo.19432911) |
+| 7 | [The Throughput Basin Origin](https://github.com/sneakyfree/agi-extensions) | 🟡 Preprint — Zenodo deposit pending Paper 7.1 |
 
-Legend: ✅ Complete (paper + code) | ✅ Published (paper on Zenodo) | 🚧 In Progress
-
-
-
----
-
-## About Windstorm-Labs
-
-This organization contains the experimental code, data, and analysis supporting the Windstorm Institute paper series. Each repository is designed for reproducibility and extension.
-
-**Questions?** Open an issue.  
-**Want to contribute?** Fork and PR.  
-**Found a bug?** Let us know.
+Note: this organization's URL slug is `WIndstorm-Labs` (capital `I`) due to a typo at org creation time. GitHub does not support renaming org slugs without breaking existing URLs. A correctly-cased mirror at `Windstorm-Labs` is planned.
 
 ---
 
 *License: MIT for code, CC BY 4.0 for data*
-
-## Published Version
-
-📄 **[Download PDF](https://doi.org/10.5281/zenodo.1234573)** (Zenodo)
-
-The PDF above is the canonical published version. This repository contains source code and experimental data.
