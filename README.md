@@ -12,7 +12,9 @@ All code, data, results, the manuscript PDF, and the adversarial review now live
 
 **→ [Windstorm-Institute/throughput-basin-origin](https://github.com/Windstorm-Institute/throughput-basin-origin)**
 
-This Labs mirror is maintained for org-level consistency. The canonical repo above has the paper, all CSVs, overnight Paper 7.1 results, and the Paper 8 preliminary data.
+This Labs mirror is maintained for org-level consistency. The canonical repo above has the paper (v1.5), the internal adversarial review, the Grand Slam supplementary materials, all CSVs, paper7.1 follow-up data, and the Paper 8 preliminary scripts.
+
+**Companion article:** [windstorminstitute.org/articles/throughput-basin-origin.html](https://windstorminstitute.org/articles/throughput-basin-origin.html) · **Zenodo:** [10.5281/zenodo.19498582](https://doi.org/10.5281/zenodo.19498582)
 
 ---
 
